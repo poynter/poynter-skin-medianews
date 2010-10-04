@@ -1,0 +1,387 @@
+/****************************************************************************************************************
+THEME NAME: Poynter Online (2011)
+THEME URI: http://poynter.org
+DESCRIPTION: Custom Startbox Child Theme for Poynter.org
+VERSION: 0.1
+AUTHOR: Dave Stanton and Eric Marden
+AUTHOR URI: http://poynter.org
+TEMPLATE: startbox
+****************************************************************************************************************
+
+Default styles from startbox are imported via wp_enque_style() in functions.php 
+
+****************************************************************************************************************
+
+Table of Contents
+
+****************************************************************************************************************
+
+0.	General Styling
+1. 	Layout
+2.	Menu
+3.	Widget Areas
+4.	Articles
+5.	Comments
+6.	Footer
+
+****************************************************************************************************************
+
+0. General Styling
+
+****************************************************************************************************************/
+
+@import url("reset.css");
+@import url("text.css");
+@import url("960.css");
+
+body {
+    font-family: arial, sans-serif;
+}
+a, a:visited {}
+a:hover, a:active, a:focus {}
+h1,h2,h3,h4,h5,h6 {
+    font-family: georgia, serif;
+}
+.promo h1, .promo h2, .promo h3, .promo h4, .promo h5, .promo h6 {
+    font-family: arial, sans-serif;
+}
+h1 {}
+h2 {}
+h3 {
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+h4 {}
+h5 {}
+h6 {}
+hr {}
+img, p img {}
+blockquote {}
+blockquote p {}
+pre,code {}
+strong {}
+em {}
+del {}
+ins {}
+abbr,cite {}
+.more-link, .more-link:visited {}
+.more-link:hover, .more-link:active {}
+.post-content dl,
+.post-content ul,
+.post-content ol {}
+.post-content dl dl,
+.post-content ul ul,
+.post-content ol ol {}
+.post-content ul {}
+.post-content ol {}
+.post-centent li {}
+
+/****************************************************************************************************************
+
+1. Layout
+
+****************************************************************************************************************/
+
+#wrapper {
+    background: url(16_col.gif) repeat-y;
+    margin-bottom: 40px;
+}
+
+#leaderboard-ad {
+    float: left;
+}
+
+#main {
+    float: left;
+    width: 720px;
+}
+
+#logo {
+    clear: both;
+    font: 60px/80px georgia, serif;
+    margin-left: 15px;
+}
+
+#front-promo {
+    > div {
+        float: left;
+        width: 233px;
+    }
+}
+
+#rail {
+    margin-left: 730px;
+}
+
+#nav {
+    background-color: #ff4a00;
+    margin-bottom: 8px;
+    li {
+        float: left;
+        list-style-type: none;
+        margin: 0;
+    }
+    a {
+        color: #ff4a00;
+        display: block;
+        font-family: corbel, verdana, sans-serif;
+        font-size: 22px;
+        line-height: 64px;
+        height: 51px;
+        margin-right: 20px;
+        text-decoration: none;
+    }
+    li:last-child a {
+        margin-right: 0;
+    }
+    a.current {
+        border-bottom: 5px solid #fefefe;
+    }
+    a:hover {
+        background-color: #eee;    
+        color: #ff4a00;
+    }
+}
+
+.feature {
+    img {
+        float: left;
+        margin-right: 20px;
+    }
+    h1 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    p.article-meta {
+        margin-left: 240px;
+    }
+}
+
+.secondary {
+    img {
+        float: left;
+        margin-right: 20px;
+    }
+    h2 {
+        font-size: 16px;
+        line-height: 24px;    
+    }
+}
+
+#upcoming {
+    img {
+        float: left;
+        margin-right: 20px;
+    }
+    h2 {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 4px;
+    }
+}
+
+#latest-news h3, #howto h3 {
+    margin-left: 60px;  
+}
+
+#latest-news .article, #howto .article {
+    img {
+        float: left;
+        margin-right: 20px;
+    }
+    h2 {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 4px;  
+    }
+    .article-meta, .breadcrumbs {
+        margin-left: 60px;
+    }
+}
+
+.article-meta {
+    font-size: 10px;
+    margin-bottom: 0px;
+    .meta-byline {}
+    .meta-date {}
+    .meta-time {}
+}
+
+.upcoming-meta {
+    font-size: 10px;
+    .meta-byline {}
+    .meta-date {}
+    .meta-time {}
+}
+
+.breadcrumbs {
+    font-size: 10px;
+}
+
+.skip-to-content {}
+.rtt {} /* Return to Top link */
+#wrap, #footer_wrap {}
+#footer_wrap {}
+#header h1 {}
+#logo {}
+#blog-title, #blog-description {}
+#container {}
+#nav-above {}
+#nav-above, #nav-below {}
+.nav-previous {}
+.nav-next {}
+.page-template-pagefullwidth-php div#container,
+.page-template-pagefullwidth-php div#content {}
+
+/****************************************************************************************************************
+
+2. Menu
+
+****************************************************************************************************************/
+
+/* Menu */
+
+#menu-above-header {
+    height: 30px; /* sketchy */
+    list-style-type: none;
+    padding-top: 5px;
+    margin-left: 10px;
+    li {
+        float: left;
+        margin-left: 5px;
+        margin-right: 15px; 
+    }
+    a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        line-height: 30px;
+        padding: 0 10px;
+    }
+    .current-menu-item a{
+        background-color: #176e6b;
+        border-radius: 5px 5px 0 0;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        color: #fff;
+    }
+}   
+
+#menu-primary-navigation {
+    background-color: #176e6b;
+    height: 30px; /* sketchy */
+    list-style-type: none;
+    padding-top: 5px;
+    margin-left: 10px;
+    li {
+        float: left;
+        margin-left: 5px;
+        margin-right: 15px; 
+    }
+    a {
+        border-radius: 5px 5px 0 0;
+        -moz-border-radius: 5px 5px 0 0;
+        -webkit-border-radius: 5px 5px 0 0;
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        line-height: 30px;
+        padding: 0 10px;
+    }
+    .current-menu-item a {
+        background-color: #fff;
+        color: #111;
+    }
+}
+
+
+/****************************************************************************************************************
+
+3. Widget Areas
+
+****************************************************************************************************************/
+
+.widget-title {}
+.widget {}
+.widget ul {}
+.widget li a, .widget li a:visited {}
+.widget li a:hover, .widget li a:active {}
+
+/****************************************************************************************************************
+
+4. Articles
+
+****************************************************************************************************************/
+
+.post {}
+.single .post {}
+.page-title {}
+.entry-title {}
+.entry-title a, .entry-title a:visited {}
+.entry-meta {}
+.entry-photo {}
+.entry-content {}
+.tag-links {}
+.comments-link, .comments-link:visited {}
+#entry-author-info {}
+.single #entry-author-info {}
+#entry-author-info h2 {}
+.single #entry-author-info h2 {}
+#author-avatar {}
+.single #author-avatar {}
+
+/****************************************************************************************************************
+
+5. Comments
+
+****************************************************************************************************************/
+
+#comments h3 {}
+.h3-link, .h3-link:visited {}
+#comments-list {}
+.commentlist,
+.commentlist .children {}
+.comments {}
+.commentlist li {}
+.comment-wrap {}
+.comment-meta {}
+.avatar {}
+.commentlist .fn, #commentform .fn {}
+.comment-author-name, .comment-author-name:visited {}
+.comment-author-name:hover, .comment-author-name:active {}
+.comment-date {}
+.commentlist li .comment-entry {}
+.commentlist li .comment-entry p {}
+.comment-arrow {}
+.reply-author {}
+.comment-entry blockquote {}
+.comment-entry blockquote blockquote {}
+.comment-entry blockquote p {}
+.comment-reply-link,
+.comment-edit-link {}
+#trackbacks-list {}
+#trackbacks-list ol {}
+.commentlist .children {}
+.commentlist .children li {}
+.children .comment-arrow {}
+.children .entry-content {}
+.children .comment-meta {}
+.children .comment-meta .avatar {}
+.children .comment-meta .fn {}
+.children .entry-content {}
+.comment-footer {}
+
+/****************************************************************************************************************
+
+6. Footer
+
+****************************************************************************************************************/
+div#footer, #wp_footer {}
+#footer_sidebar .aside {}
+#sb_credit {}
+#site_info {}
+.copyright,
+.footer_text {}
+#login_content {}
+#login_links {}
+#login_links li {}
