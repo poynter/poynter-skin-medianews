@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Welcome</title>
+<style>
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+body {
+background-color:#ddd;
+font-family: 'Helvetica Neue',Arial,Verdana,'Liberation Sans',FreeSans,sans-serif;
+line-height:18px;
+}
+
+#nelson {
+background-color:#333;
+margin: 0 auto;
+width:220px;
+}
+
+#nelson-image {
+    background: url(wall-nelson-full.png) 0 0;
+    height: 120px;
+}
+#nelson-welcome {
+    background: url(wall-nelson-full.png) 0 -120px;
+    height: 30px; 
+}
+#nelson-headline {
+    background: url(wall-nelson-full.png) 0 -150px;
+    height: 55px;
+}
+#nelson-links {
+    background: url(wall-nelson-full.png) 0 -205px;
+    height: 78px;
+}
+#nelson-support {
+    background: url(wall-nelson-full.png) 0 -283px;
+    height: 40px;
+}
+#nelson-search {
+    background: url(wall-nelson-full.png) 0 -323px;
+    height: 40px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Georgia, "Times New Roman", Times, serif;   
+}
+
+h1 {
+color: #eee;
+font-size: 14px;
+padding: 5px 10px;
+margin-bottom: 0;
+}
+
+h2 {
+color: #eee;
+background-color:#222;
+font-size: 13px;
+padding: 5px 10px;
+}
+
+ul {
+border-top: 1px solid white;
+}
+
+li {
+border-bottom: 1px solid white;
+font-size: 11px;
+padding: 4px 10px;
+}
+
+li a {
+color: teal;
+text-decoration: none;
+}
+
+li.odd {
+border-right: 1px solid white;
+float: left;
+margin-right: 10px;
+width: 80px;
+}
+
+li#donate {
+border-bottom: 0;
+}
+
+.search input, .search button {
+	border: none;
+	float: left;
+}
+.search input.box {
+    margin: 8px 0 0 10px;
+	width: 164px;
+	height: 22px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.search button.btn {
+    background: none;
+    margin: 7px 0 0 0;
+	width: 30px;
+	height: 26px;
+	cursor: pointer;
+	text-indent: -9999px;
+}
+
+#nelson > div > * {visibility:hidden;}
+#nelson-search > form {
+    visibility: visible;
+}
+
+</style>
+</head>
+<body>
+<div id="nelson">
+    <div id="nelson-image">
+        <!-- <img src="cat.jpg" width="220" height="120" alt="Nelson reading the paper" title="Nelson reading the paper" /> -->
+    </div>
+    <div id="nelson-welcome">
+        <h1>WELCOME TO POYNTER</h1>
+    </div>
+    <div id="nelson-headline">
+        <h2><span class="posttype">Video: </span>Poynter&apos;s Tom French Guests on The Colbert Report</h2>
+    </div>
+    <div id="nelson-links">
+        <ul>
+            <li class="odd"><a href="#">foo</a></li>
+            <li><a href="#">foo</a></li>
+            <li class="odd"><a href="#">foo</a></li>
+            <li><a href="#">foo</a></li>
+            <li class="odd"><a href="#">foo</a></li>
+            <li><a href="#">foo</a></li>
+        </ul>
+    </div>
+    <div id="nelson-support">
+        <p>Support Poynter &rarr;</p>
+    </div>
+    <div id="nelson-search">
+        <form action="http://www.google.com/cse" id="cse-search-box" class="search">
+            <div>
+                <input type="hidden" name="cx" value="001006011763809941815:njuofs6jfz4" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="text" name="q" size="25" class="box" />
+                <!-- <input type="submit" name="sa" value="Search" class="btn" /> -->
+                <button class="btn" title="Submit Search">Search</button> 
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

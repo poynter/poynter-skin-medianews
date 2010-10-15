@@ -175,6 +175,15 @@ h3 {
 }
 
 /* Return to Top link */
+#wrapper-footer {
+  background-color: blue;
+  clear: left;
+}
+
+#wrapper-footer .container_16 {
+  background-color: teal;
+}
+
 /****************************************************************************************************************
 
 2. Menu
@@ -234,6 +243,34 @@ h3 {
 #menu-primary-navigation .current-menu-item a {
   background-color: #fff;
   color: #111;
+}
+
+#menu-secondary-navigation {
+  background-color: #c6dddb;
+  height: 30px;
+  /* sketchy */
+  list-style-type: none;
+  padding-top: 5px;
+  margin-left: 10px;
+}
+#menu-secondary-navigation li {
+  float: left;
+  margin-left: 5px;
+  margin-right: 15px;
+}
+#menu-secondary-navigation a {
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  line-height: 30px;
+  padding: 0 10px;
+}
+#menu-secondary-navigation .current-menu-item a {
+  background-color: #fff;
+  color: #000;
 }
 
 /****************************************************************************************************************
