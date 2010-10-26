@@ -29,15 +29,17 @@ Table of Contents
 0. General Styling
 
 ****************************************************************************************************************/
-@import url("reset.css");
-@import url("text.css");
-@import url("960.css");
+@import url("css/reset.css");
+@import url("css/text.css");
+@import url("css/960.css");
 body {
+	background: url(/wp-content/uploads/2010/10/bg-body.png) repeat-x 0 -5px;
   font-family: arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: georgia, serif;
+  font-weight: normal;
 }
 
 .promo h1, .promo h2, .promo h3, .promo h4, .promo h5, .promo h6 {
@@ -49,6 +51,13 @@ h3 {
   margin-bottom: 14px;
 }
 
+ul li {
+list-style-type: none; 
+margin-left: 0;
+padding-left: 0;
+}
+
+
 /****************************************************************************************************************
 
 1. Layout
@@ -56,10 +65,11 @@ h3 {
 ****************************************************************************************************************/
 #wrapper {
   background: url(16_col.gif) repeat-y;
+background: url(/wp-content/uploads/2010/10/bg-body.png) repeat-x 0 -5px;
   margin-bottom: 40px;
 }
 
-#leaderboard-ad {
+#leaderboard img {
   float: left;
 }
 
@@ -81,36 +91,6 @@ h3 {
 
 #rail {
   margin-left: 730px;
-}
-
-#nav {
-  background-color: #ff4a00;
-  margin-bottom: 8px;
-}
-#nav li {
-  float: left;
-  list-style-type: none;
-  margin: 0;
-}
-#nav a {
-  color: #ff4a00;
-  display: block;
-  font-family: corbel, verdana, sans-serif;
-  font-size: 22px;
-  line-height: 64px;
-  height: 51px;
-  margin-right: 20px;
-  text-decoration: none;
-}
-#nav li:last-child a {
-  margin-right: 0;
-}
-#nav a.current {
-  border-bottom: 5px solid #fefefe;
-}
-#nav a:hover {
-  background-color: #eee;
-  color: #ff4a00;
 }
 
 .feature img {
@@ -161,6 +141,30 @@ h3 {
   margin-left: 60px;
 }
 
+#bio img {
+float: left;
+margin-bottom: 15px;
+}
+
+#bio p {
+font-size: 11px;
+font-style: italic;
+margin-left: 120px;
+}
+
+#bio hr {
+margin: 10px 0;
+}
+
+#related-articles {
+float: left;
+width: 220px;
+}
+
+#related-training {
+margin-left: 240px;
+}
+
 .article-meta {
   font-size: 10px;
   margin-bottom: 0px;
@@ -176,12 +180,53 @@ h3 {
 
 /* Return to Top link */
 #wrapper-footer {
-  background-color: blue;
+  background-color: #f0f0f0;
+border-top: 1px solid #d8d8d8;
   clear: left;
+padding-top: 10px;
+font-size: 10px;
 }
 
-#wrapper-footer .container_16 {
-  background-color: teal;
+#wrapper-footer a {
+text-decoration: none;
+color: black;
+}
+
+#wrapper-footer a:hover {
+text-decoration: underline;
+color: #176e6b;
+}
+
+#welcome {
+    position: relative;
+    width: 220px;
+margin-top: 5px;
+}
+#welcome .search input, #welcome .search button {
+	border: none;
+	float: left;
+}
+#welcome .search input.box {
+    background: none;
+    margin: 8px 0 0 10px;
+	width: 164px;
+	height: 22px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+#welcome .search button.btn {
+    background: none;
+    margin: 7px 0 0 0;
+	width: 32px;
+	height: 22px;
+	cursor: pointer;
+	text-indent: -9999px;
+}
+#welcome-search {
+    position: absolute;
+    bottom: 14px;
+    left: 4px;
 }
 
 /****************************************************************************************************************
@@ -191,10 +236,9 @@ h3 {
 ****************************************************************************************************************/
 /* Menu */
 #menu-above-header {
-  height: 30px;
-  /* sketchy */
+font-weight: bold;
   list-style-type: none;
-  padding-top: 5px;
+  padding-top: 10px;
   margin-left: 10px;
 }
 #menu-above-header li {
@@ -203,32 +247,38 @@ h3 {
   margin-right: 15px;
 }
 #menu-above-header a {
-  color: black;
+  color: #fff;
   text-decoration: none;
   display: block;
   line-height: 30px;
   padding: 0 10px;
-}
-#menu-above-header .current-menu-item a {
-  background-color: #176e6b;
   border-radius: 5px 5px 0 0;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  color: #fff;
+}
+#menu-above-header a:hover {
+background-color: #444;
+}
+#menu-above-header .current-menu-item a {
+  background-color: #fff;
+  color: #176e6b;
 }
 
 #menu-primary-navigation {
-  background-color: #176e6b;
-  height: 30px;
-  /* sketchy */
+  background: url(http://wp.poynterplayground.com/wp-content/uploads/2010/10/bg-nav.png) repeat-x;
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+height: 35px; /* remove later after adding clear div */
   list-style-type: none;
   padding-top: 5px;
-  margin-left: 10px;
+margin-left: 0;
+
 }
 #menu-primary-navigation li {
   float: left;
-  margin-left: 5px;
   margin-right: 15px;
+margin-left: 5px;
 }
 #menu-primary-navigation a {
   border-radius: 5px 5px 0 0;
@@ -237,8 +287,12 @@ h3 {
   color: #fff;
   text-decoration: none;
   display: block;
-  line-height: 30px;
+  line-height: 35px;
   padding: 0 10px;
+font-weight: bold;
+}
+#menu-primary-navigation a:hover {
+text-decoration: underline;
 }
 #menu-primary-navigation .current-menu-item a {
   background-color: #fff;
@@ -278,11 +332,166 @@ h3 {
 3. Widget Areas
 
 ****************************************************************************************************************/
+
+.ad-disclaimer {
+font-size: 10px;
+display: block;
+color: #ccc;
+margin-bottom: 5px;
+}
+
+#ad-tile {
+background-color: #eee;
+padding: 10px 0 10px 20px;
+margin-right: 10px;
+margin-top: -5px;
+}
+
+#ad-tile .ad-disclaimer {
+margin-left: 50px;
+margin-bottom: -3px;
+}
+
+#tabbed-widget-3 {
+margin-top: 20px;
+}
+
+#tabbed-widget-3 h4 {
+background-color: #ccc;
+padding: 3px 0 2px 7px;
+width: 213px;
+}
+
+#tabbed-widget-3 ul li {
+list-style-type: decimal;
+list-style-position: inside;
+}
+
+
+#tabbed-widget-3 .tw-content a {
+text-decoration: none;
+color: black;
+}
+
+#jobs {
+margin-right: 10px;
+}
+
+#jobs h3 {
+color: #176e6b;
+}
+
+#jobs-listings {
+background-color: #eee;
+border: 1px solid #ccc;
+color: #999;
+margin-bottom: 5px;
+}
+
+#jobs-listings li {
+border-bottom: 1px solid #ccc;
+padding: 5px;
+}
+
+
+#jobs-listings li.last {
+border-bottom: 0;
+color: #176e6b;
+}
+
+#jobs-listings a {
+text-decoration: none;
+color: black;
+}
+
+#jobs-listings a:hover {
+color: #176e6b;
+}
+
+#jobs-links {
+padding-left: 5px;
+}
+
+#jobs-links li {}
+
+#jobs-links a {
+color: #176e6b;
+text-decoration: none;
+}
+
+#jobs-links a:hover {
+text-decoration: underline;
+}
+
+#ad-text {
+margin-bottom: 20px;
+margin-right: 10px;
+}
+
+#ad-text .ad-disclaimer {
+margin-left: 70px;
+}
+
+#ad-text a {
+background-color: #eee;
+display: block;
+padding: 10px;
+text-decoration: none;
+}
+
+#ad-text a:visited {
+color: black;
+}
+
+#ad-text span.accent {
+color: #ae3428;
+display: block;
+margin-bottom: 5px;
+}
+
+#ad-text p {
+margin-bottom: 0;
+}
+
+#ad-skyscraper {
+background-color: #eee;
+padding: 10px 0 10px 30px;
+margin-right: 10px;
+margin-bottom: 10px;
+}
+
+#ad-skyscraper .ad-disclaimer {
+margin-left: 40px;
+}
+
+#ad-coupon7 {
+background-color: #eee;
+padding: 10px 0 10px 20px;
+margin-right: 10px;
+}
+
+#ad-coupon7 .ad-disclaimer {
+margin-left: 50px;
+}
+
 /****************************************************************************************************************
 
 4. Articles
 
 ****************************************************************************************************************/
+
+.alignleft {
+clear: left;
+float: left;
+margin: 5px 20px 10px 0;
+}
+
+.alignright {
+clear: left;
+float: right;
+margin: 5px 0 10px 10px;
+}
+
 /****************************************************************************************************************
 
 5. Comments
@@ -293,3 +502,8 @@ h3 {
 6. Footer
 
 ****************************************************************************************************************/
+
+
+
+
+

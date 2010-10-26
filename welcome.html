@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Welcome</title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <style>
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
@@ -18,6 +19,7 @@ background-color:#333;
 margin: 0 auto;
 width:220px;
 }
+
 
 #nelson-image {
     background: url(wall-nelson-full.png) 0 0;
@@ -37,51 +39,60 @@ width:220px;
 }
 #nelson-support {
     background: url(wall-nelson-full.png) 0 -283px;
+    border-bottom: 5px solid white;
     height: 40px;
 }
 #nelson-search {
     background: url(wall-nelson-full.png) 0 -323px;
-    height: 40px;
+    height: 39px;
+position: relative;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: Georgia, "Times New Roman", Times, serif;   
+h2,h3,h4,h5,h6 {
+    font-family: Georgia, "Times New Roman", Times, serif;  
+    font-weight: normal; 
 }
 
 h1 {
 color: #eee;
 font-size: 14px;
+font-weight: normal;
 padding: 5px 10px;
 margin-bottom: 0;
 }
 
 h2 {
-color: #eee;
+color: #ccc;
 background-color:#222;
-font-size: 13px;
-padding: 5px 10px;
-}
-
-ul {
-border-top: 1px solid white;
+font-size: 14px;
+padding: 10px 10px;
+font-weight: normal;
 }
 
 li {
-border-bottom: 1px solid white;
 font-size: 11px;
 padding: 4px 10px;
 }
 
+a {
+color: white;
+text-decoration: none;
+}
+
 li a {
-color: teal;
+color: #2cc9d1;;
 text-decoration: none;
 }
 
 li.odd {
-border-right: 1px solid white;
 float: left;
 margin-right: 10px;
 width: 80px;
+}
+
+#nelson-support a {
+display: block;
+padding: 10px;
 }
 
 li#donate {
@@ -95,7 +106,7 @@ border-bottom: 0;
 .search input.box {
     margin: 8px 0 0 10px;
 	width: 164px;
-	height: 22px;
+	height: 20px;
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -110,9 +121,19 @@ border-bottom: 0;
 	text-indent: -9999px;
 }
 
-#nelson > div > * {visibility:hidden;}
+/* #nelson > div > * {visibility:hidden;} */
 #nelson-search > form {
     visibility: visible;
+}
+
+form span {
+font-size: 10px;
+color: #666;
+position: absolute;
+top: 10px;
+left: 10px;
+text-indent: 10px;
+width: 170px;
 }
 
 </style>
@@ -123,35 +144,48 @@ border-bottom: 0;
         <!-- <img src="cat.jpg" width="220" height="120" alt="Nelson reading the paper" title="Nelson reading the paper" /> -->
     </div>
     <div id="nelson-welcome">
-        <h1>WELCOME TO POYNTER</h1>
+        <h1><a href="http://poynter.org">WELCOME TO POYNTER</a></h1>
     </div>
     <div id="nelson-headline">
-        <h2><span class="posttype">Video: </span>Poynter&apos;s Tom French Guests on The Colbert Report</h2>
+        <h2><a href="#"><span class="posttype">Video: </span>Poynter&apos;s Tom French Guests on The Colbert Report</a></h2>
     </div>
     <div id="nelson-links">
         <ul>
-            <li class="odd"><a href="#">foo</a></li>
-            <li><a href="#">foo</a></li>
-            <li class="odd"><a href="#">foo</a></li>
-            <li><a href="#">foo</a></li>
-            <li class="odd"><a href="#">foo</a></li>
-            <li><a href="#">foo</a></li>
+            <li class="odd"><a href="http://poynter.newsutest.com/node/164" target="_blank">Mission</a></li>
+            <li><a href="http://poynter.newsutest.com/poynter-events" target="_blank">Events</a></li>
+            <li class="odd"><a href="http://poynter.newsutest.com/training/in-person" target="_blank">Seminars</a></li>
+            <li><a href="http://www.newsu.org/" target="_blank">News University</a></li>
+            <li class="odd"><a href="http://www.poynter.org/column.asp?id=45" target="_blank">Romenesko</a></li>
+            <li><a href="#" target="_blank">Morning Meeting</a></li>
         </ul>
     </div>
     <div id="nelson-support">
-        <p>Support Poynter &rarr;</p>
+        <a href="http://poynter.newsutest.com/support-poynter" target="_blank">&nbsp;</a>
     </div>
     <div id="nelson-search">
         <form action="http://www.google.com/cse" id="cse-search-box" class="search">
             <div>
                 <input type="hidden" name="cx" value="001006011763809941815:njuofs6jfz4" />
                 <input type="hidden" name="ie" value="UTF-8" />
-                <input type="text" name="q" size="25" class="box" />
+                <input type="text" name="q" size="25" class="box" value=""/>
                 <!-- <input type="submit" name="sa" value="Search" class="btn" /> -->
                 <button class="btn" title="Submit Search">Search</button> 
             </div>
+        <span>SEARCH THIS SITE</span>
         </form>
     </div>
 </div>
+
+<script>
+
+$('input[name="q"]').attr('value','');
+
+$('form span').click(function() {
+    $(this).hide();
+    $('input[name="q"]').focus();
+});
+    
+</script>
+
 </body>
 </html>
