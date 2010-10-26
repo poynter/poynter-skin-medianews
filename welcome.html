@@ -3,7 +3,6 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Welcome</title>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <style>
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
@@ -144,7 +143,7 @@ width: 170px;
         <!-- <img src="cat.jpg" width="220" height="120" alt="Nelson reading the paper" title="Nelson reading the paper" /> -->
     </div>
     <div id="nelson-welcome">
-        <h1><a href="http://poynter.org">WELCOME TO POYNTER</a></h1>
+        <h1><a href="http://poynter.org" target="_blank">WELCOME TO POYNTER</a></h1>
     </div>
     <div id="nelson-headline">
         <h2><a href="#"><span class="posttype">Video: </span>Poynter&apos;s Tom French Guests on The Colbert Report</a></h2>
@@ -171,21 +170,9 @@ width: 170px;
                 <!-- <input type="submit" name="sa" value="Search" class="btn" /> -->
                 <button class="btn" title="Submit Search">Search</button> 
             </div>
-        <span>SEARCH THIS SITE</span>
         </form>
     </div>
 </div>
-
-<script>
-
-$('input[name="q"]').attr('value','');
-
-$('form span').click(function() {
-    $(this).hide();
-    $('input[name="q"]').focus();
-});
-    
-</script>
 
 </body>
 </html>

@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <style>
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
@@ -41,6 +42,16 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     bottom: 14px;
     left: 4px;
 }
+#welcome-search form span {
+    font-size: 11px;
+    color: #666;
+    position: absolute;
+    top: 11px;
+    line-height: 22px;
+    left: 7px;
+    text-indent: 10px;
+    width: 168px;
+}
 
 </style>
 </head>
@@ -57,9 +68,21 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
                 <input type="text" name="q" size="25" class="box" />
                 <button class="btn" title="Submit Search">Search</button> 
             </div>
+            <span>SEARCH THIS SITE</span>
         </form>
     </div>
 </div>
+
+<script>
+
+$('#welcome-search input[name="q"]').attr('value','');
+
+$('#welcome-search form span').click(function() {
+    $(this).hide();
+    $('#welcome-search input[name="q"]').focus();
+});
+    
+</script>
 
 </body>
 </html>
